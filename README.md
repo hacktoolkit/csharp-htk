@@ -23,7 +23,9 @@ A set of convenience utils for C#.
 
 # Authors and Maintainers
 
-[Hacktoolkit](https://github.com/hacktoolkit) and [Jonathan Tsai](https://github.com/jontsai)
+- [Hacktoolkit](https://github.com/hacktoolkit)
+- [Jonathan Tsai](https://github.com/jontsai)
+- [Gökhan Öztürk](https://github.com/Quanthir)
 
 # License
 
