@@ -4,9 +4,9 @@ using System.IO;
 
 namespace HTK.Utils
 {
-    public class Debug
+    public class Debugers
     {
-        private const string DEFAULT_FILE_PATH = "debug.log";
+        private const string DEFAULT_FILE_PATH = "fdebug.log";
         /// <summary>
         /// Counter of how many times the debug used. Can be set to any integer you want, anytime you want.
         /// </summary>
@@ -27,7 +27,7 @@ namespace HTK.Utils
         /// </summary>
         /// <param name="text"></param>
         /// <param name="filename"></param>
-        public static void FileDump(string text, string filename = null)
+        public static void fdebug(string text, string filename = null)
         {
             string time = $"{DateTime.Now.ToString("s")}";
 
@@ -44,15 +44,15 @@ namespace HTK.Utils
         /// </summary>
         /// <param name="obj"></param>
         /// <param name="filename"></param>
-        public static void FileDump(object obj, string filename = null)
+        public static void fdebug(object obj, string filename = null)
         {
             string serialized = JsonConvert.SerializeObject(obj);
 
-            FileDump(serialized, filename);
+            fdebug(serialized, filename);
         }
 
         /// <summary>
-        /// Sends given text to slack.
+        /// Sends given text to Slack.
         /// </summary>
         /// <param name="text">Text to send</param>
         /// <param name="label">Label for the text.</param>
@@ -62,7 +62,7 @@ namespace HTK.Utils
         }
 
         /// <summary>
-        /// Sends given text to slack.
+        /// Sends given text to Slack.
         /// </summary>
         /// <param name="text">Text to send</param>
         public static void ToSlack(string text)
@@ -71,7 +71,7 @@ namespace HTK.Utils
         }
 
         /// <summary>
-        /// Sends given object to slack as json string.
+        /// Sends given object to Slack as json string.
         /// </summary>
         /// <param name="obj"></param>
         public static void ToSlack(object obj)

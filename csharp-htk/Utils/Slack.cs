@@ -27,7 +27,7 @@ namespace HTK.Utils
         }
 
         /// <summary>
-        /// Sends message to slack.
+        /// Sends message to Slack.
         /// </summary>
         /// <param name="text">Text to send</param>
         /// <exception cref="ArgumentException"></exception>
@@ -47,7 +47,7 @@ namespace HTK.Utils
         }
 
         /// <summary>
-        /// Sends message to slack.
+        /// Sends message to Slack.
         /// </summary>
         /// <param name="webhook">webhook uri</param>
         /// <param name="text">Text to send</param>
