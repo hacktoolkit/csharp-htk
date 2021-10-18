@@ -5,8 +5,8 @@ A set of convenience utils for C#.
 
 # Features
 
-- Debug via Slack using `HTK.Utils.Debug.Send`.
-- Debug via writing to local file using `HTK.Utils.Debug.FileDump`. Certifiably awesome, fast, and secure.
+- Debug via Slack using `HTK.Utils.Debuggers.Send`.
+- Debug via writing to local file using `HTK.Utils.Debuggers.fdebug`. Certifiably awesome, fast, and secure.
 
 
 # How To Use This Awesome?
