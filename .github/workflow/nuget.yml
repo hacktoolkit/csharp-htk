@@ -1,0 +1,20 @@
+name: Publish to Nuget
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build, Pack & Publish
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '5.0.x'
+      - run: dotnet build csharp-htk
+      - name: Create the package
+        run: dotnet pack --configuration Release csharp-htk
+      - name: Publish the package to GPR
+        run: dotnet nuget push csharp-htk/bin/Release/*.nupkg -k ${{secrets.NUGET_AUTH_TOKEN}} -s https://api.nuget.org/v3/index.json
